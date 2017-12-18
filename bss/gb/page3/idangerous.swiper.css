@@ -1,0 +1,174 @@
+/*
+ * Swiper 2.7.0
+*/
+.swiper-container {
+	margin:0 auto;
+	position:relative;
+	overflow:hidden;
+	-webkit-backface-visibility:hidden;
+	-moz-backface-visibility:hidden;
+	-ms-backface-visibility:hidden;
+	-o-backface-visibility:hidden;
+	backface-visibility:hidden;
+	/* Fix of Webkit flickering */
+	z-index:1;
+}
+.swiper-wrapper {
+	position:relative;
+	width:100%;
+	-webkit-transition-property:-webkit-transform, left, top;
+	-webkit-transition-duration:0s;
+	-webkit-transform:translate3d(0px,0,0);
+	-webkit-transition-timing-function:ease;
+	
+	-moz-transition-property:-moz-transform, left, top;
+	-moz-transition-duration:0s;
+	-moz-transform:translate3d(0px,0,0);
+	-moz-transition-timing-function:ease;
+	
+	-o-transition-property:-o-transform, left, top;
+	-o-transition-duration:0s;
+	-o-transform:translate3d(0px,0,0);
+	-o-transition-timing-function:ease;
+	-o-transform:translate(0px,0px);
+	
+	-ms-transition-property:-ms-transform, left, top;
+	-ms-transition-duration:0s;
+	-ms-transform:translate3d(0px,0,0);
+	-ms-transition-timing-function:ease;
+	
+	transition-property:transform, left, top;
+	transition-duration:0s;
+	transform:translate3d(0px,0,0);
+	transition-timing-function:ease;
+
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+.swiper-free-mode > .swiper-wrapper {
+	-webkit-transition-timing-function: ease-out;
+	-moz-transition-timing-function: ease-out;
+	-ms-transition-timing-function: ease-out;
+	-o-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+	margin: 0 auto;
+}
+.swiper-slide {
+	float: left;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-horizontal {
+	-ms-touch-action: pan-y;
+}
+.swiper-wp8-vertical {
+	-ms-touch-action: pan-x;
+}
+
+/* ===============================================================
+Your custom styles, here you need to specify container's and slide's
+sizes, pagination, etc.
+================================================================*/
+.swiper-container {
+	/* Specify Swiper's Size: */
+
+	/*width:200px;
+	height: 100px;*/
+}
+.swiper-slide {
+	/* Specify Slides's Size: */
+	
+	/*width: 100%;
+	height: 100%;*/
+}
+.swiper-slide-active {
+	/* Specific active slide styling: */
+	
+}
+.swiper-slide-visible {
+	/* Specific visible slide styling: */	
+
+}
+/* ===============================================================
+Pagination Styles
+================================================================*/
+.swiper-pagination-switch {
+	/* Stylize pagination button: */	
+
+}
+.swiper-active-switch {
+	/* Specific active button style: */	
+	
+}
+.swiper-visible-switch {
+	/* Specific visible button style: */	
+	
+}
+
+
+
+.page3 .tabs{height:40px;padding-top: 40px;padding-bottom: 20px;}
+.page3 .tabs a{
+	display:block;
+	float:left;
+	width: 100px;
+    color: #000;
+    text-align: center;
+    background: #F1B300;
+	line-height:40px;
+	font-size:14px;
+	text-decoration:none;
+	margin-right: 10px;
+	border-bottom: none;}
+	
+.page3 .tabs a.active{
+    color: #FDFDFD;
+    /*background: #4DA62E;*/
+    background: #1E8AC7;}
+    
+.swiper-container{
+    /*background: rgba(204, 204, 204, 0.62);*/
+   background: url(/bss/gb/page3/trans.png) repeat;
+    height: 340px;
+    border-radius: 3px;
+	width:100%;
+	border-top:0;}
+	
+.swiper-slide{
+	height:325px;
+	width:100%;
+	background:none;
+	color:#252525;}
+.content-slide{ padding: 30px 40px 0px 40px;}
+.content-slide p{text-indent:2em;line-height:1.9;}
+
+
+.page3 .content-slide .rt {
+	width: 650px;
+    padding-top: 10px;
+    padding: 11px 15px;
+    background-color: #fff;
+    border-radius: 3px;}
+    
+.page3 .content-slide .rt h2 {
+	font-weight: normal;
+	letter-spacing: 1px;
+	padding-bottom: 15px;
+	font-size: 16px;}
+.page3 .content-slide .rt p{ 
+	line-height: 24px;
+    font-size: 19px;
+     padding-left: 10px;}
+
+.page3 .content-slide  .casefarms {
+    margin: 0 auto;
+    display: block;
+    border-radius: 5px;
+  margin-top: 25px; }
+
+.pl30 { padding-left: 30px;  }
+.pb8 { padding-bottom: 8px;}

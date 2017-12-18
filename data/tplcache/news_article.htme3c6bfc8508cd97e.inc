@@ -1,0 +1,42 @@
+<?php
+$z[0]=Array("field","",206,225);
+$z[0][4]['name']="title";
+$z[1]=Array("global","",226,252);
+$z[1][4]['name']="cfg_webname";
+$z[2]=Array("field","",300,352);
+$z[2][4]['name']="description";
+$z[2][4]['function']="html2text(@me)";
+$z[3]=Array("field","",393,415);
+$z[3][4]['name']="keywords";
+$z[4]=Array("include","",1421,1456);
+$z[4][4]['filename']="head.htm";
+$z[5]=Array("field","",1815,1834);
+$z[5][4]['name']="title";
+$z[6]=Array("field","",1912,1966);
+$z[6][4]['name']="pubdate";
+$z[6][4]['function']="GetDateMk(@me)";
+$z[7]=Array("field","",2023,2050);
+$z[7][4]['name']="phpurl";
+$z[8]=Array("field","",2074,2097);
+$z[8][4]['name']="id";
+$z[9]=Array("field","",2102,2126);
+$z[9][4]['name']="mid";
+$z[10]=Array("field","",2283,2301);
+$z[10][4]['name']="body";
+$z[11]=Array("tag","",2441,2467);
+$z[11][4]['type']="current";
+$z[12]=Array("channel","	\r\n					<li><a href=\"[field:typeurl/]\">[field:typename/]</a></li>\r\n				",3896,4017);
+$z[12][4]['reid']="1";
+$z[12][4]['type']="son";
+$z[13]=Array("arclist","\r\n					<li><a href=\"[field:arcurl/]\">-&nbsp;[field:title/]</a></li>\r\n					",4104,4246);
+$z[13][4]['row']="100";
+$z[13][4]['pagesize']="10";
+$z[13][4]['orderby']="rand";
+$z[14]=Array("tag"," \r\n<li><a href='[field:link/]'>[field:tag /]</a> </li>\r\n",4405,4513);
+$z[14][4]['row']="30";
+$z[14][4]['sort']="new";
+$z[14][4]['getall']="0";
+$z[15]=Array("include","",4611,4653);
+$z[15][4]['filename']="news-footer.htm";
+
+?>

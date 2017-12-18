@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>  
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+      	<meta name="viewport" content="width=device-width, initial-scale=1"/>   
+    <title>{dede:field.seotitle /}</title>
+    <meta name="description" content="{dede:field name='description'  function='html2text(@me)'/}" />
+    <meta name="keywords" content="{dede:field name='keywords'/}" />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/bss/style.css" >
+    <!-- top---->
+<script type="text/javascript" src="/bss/top/jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	//首先将#back-to-top隐藏
+	$("#back-to-top").hide();
+	//当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
+	$(function () {
+		$(window).scroll(function(){
+		if ($(window).scrollTop()>100){
+		$("#back-to-top").fadeIn(1500);
+		}
+		else
+		{
+		$("#back-to-top").fadeOut(1500);
+		}
+		});
+		//当点击跳转链接后，回到页面顶部位置
+		$("#back-to-top").click(function(){
+		$('body,html').animate({scrollTop:0},1000);
+		return false;
+		});
+		});
+		});
+  </script>      
+   </head> 
+
+  <body id="top">
+  	<!--手机导航--><div class="sj-wrapper">
+        	<div class="toolbar">
+        		<div id="open-sb" class="menu-button menu-left"></div>
+        	</div>
+        	<section class="sidebar">
+        		<nav>
+        			<h6>网站导航</h6>
+        			<ul>
+        				<li><a href="/" >首页</a></li>
+        				<li><a href="/company/">公司与项目</a></li>        				
+        				<li><a href="/procedures/">案例与流程</a></li>
+        				<li><a href="/service/">价格与服务</a></li>
+        				<li><a href="/news/">EB3讲堂</a></li>
+        				<li><a href="/contact/">联系预约</a></li>        				
+        			</ul>
+        		  </nav>
+        	</section></div><script>
+$( document ).ready(function() {
+	$.ajaxSetup({
+		cache: false
+	});
+	$( '.sidebar' ).simpleSidebar({
+		settings: {
+			opener: '#open-sb',
+			wrapper: '.wrapper',
+			animation: {
+				duration: 500,
+				easing: 'easeOutQuint'
+			}
+		},
+		sidebar: {
+			align: 'left',
+			width: 200,
+			closingLinks: 'a',
+		}
+	});
+});
+</script><!--手机导航-->
+  	<p id="back-to-top"><a href="#top"><span></span></a></p>
+    <div class="nei-top">
+    <div class="liuc nei-site-header" >
+    			{dede:include filename="head.htm"/}
+    		</div>
+    </div>	
+	<!--第一层--->
+	<div class="lc-main">
+		<div class="tab">
+			<ul class="tabs">
+				<li><a href="#">STEP1：申请劳工卡Labor Certificate</a></li>
+				<li><a href="#">STEP2：申请移民请愿 I-140</a></li>
+				<li><a href="#">STEP3：等待排期</a></li>
+				<li><a href="#">STEP4：准备面试</a></li>
+		</ul> <!-- / tabs -->
+		<div class="tab_content">
+			<div class="tabs_item">
+			<h4 class="card">雇主为您向劳工部申请劳工卡Labor Certificate</h4>
+			<li>提交申请后，劳工部一般当天会发送三封邮件<br><br>
+				<img src="/bss/neiye/yj1.jpg">
+				<img src="/bss/neiye/yj2.jpg">
+				<img src="/bss/neiye/yj3.jpg"></li>
+								
+			<li>劳工卡审批时间为半年到一年（在没有抽查的情况下），遇到抽查则延长一年左右（劳工卡抽查几率较高，我们默认所有客户都会遇到抽查，因此会提前准备相关材料。
+				目前为止，我们抽查的通过率为100%。一些中介遇到抽查就选择撤案和换雇主，这样会使您的优先日一拖再拖，非常不负责任。（抽查通知案例如下：Audit Notification）
+				<br><br><img src="/bss/neiye/choucha1.jpg">
+				<img src="/bss/neiye/choucha2.jpg">
+				<img src="/bss/neiye/choucha3.jpg"></li>	
+				
+			<li>批准后ETA9089表上会有劳工部官员的签字（批准的劳工卡案例如下：Accepted ETA9089 Form）<br><br>
+				<img src="/bss/neiye/qm1.jpg">
+				<img src="/bss/neiye/qm2.jpg">
+				<img src="/bss/neiye/qm3.jpg">
+				</li>
+			<li>劳工卡批准后，有效期为半年，半年内我们会为您提交I-140移民请愿。</li>
+		</div> <!-- / tabs_item -->
+
+		<div class="tabs_item">		
+			<h4 class="qyuan">我们替您向移民局申请移民请愿 I-140</h4>
+			<li>I-140移民请愿申请时，我们会将劳工卡、雇主信息和您与家人的相关信息提供给移民局。</li>								
+			<li>I-140审批时间为3个月到1年左右（没有抽查的情况下）；遇到抽查则延长一年左右（I-140遇到抽查的几率非常低，如遇到，我们会100%帮您通过抽查）。</li>	
+		    <li>批准的I-140文件案例（I-140 Acceptance）<br><br>
+		    	<img src="/bss/neiye/140.jpg">
+		    	</li>
+		</div> <!-- / tabs_item -->
+
+		<div class="tabs_item">
+			<h4 class="paiqi">等待排期</h4>
+			<li>排期与两个因素有关，一个是您的优先日（Priority Date），一个是美国国务院（Department of State）控制的排期表(Visa Bulletin)。</li>
+			<li>雇主为您递交劳工卡申请的日期即为您的优先日（抽查撤案会导致优先日失效）。</li>
+			<li>美国国务院每个月会给各个移民类别公布一个时间点，该类别下优先日在这个时间点之前的申请者就可以开始为移民面试做准备了。</li>
+			<li>您办理的非技术劳工移民，属于排期时间表中EMPLOYMENT-BASED PREFERENCES中的Other Workers类别。
+				<a href="http://travel.state.gov/content/visas/english/law-and-policy/bulletin.html" target="_blank" style="font-weight: bold;">
+					请查看官网每月公布的排期表</a></li>		
+		</div> <!-- / tabs_item -->
+		
+		<div class="tabs_item">
+			<h4 class="cn"> 准备面试：排期开放时人在中国</h4>
+			<li> 我们替您提交DS-260表格和民事证明文件给美国签证中心（National Visa Center）</li>
+			<li> 签证中心审核无误后，将全部文件转交美国驻广州领事馆，您在国内安心等待移民面试通知即可。</li>
+			<li> 面试前按照领馆要求进行移民体检、准备补充材料，面试通过后很快即可获得移民签证。</li>
+			<li> 半年内来美后，2个月左右即可拿到绿卡。</li><br>
+			
+			<h4 class="mg"> 准备面试：排期开放时人在美国</h4>
+			<li> 我们替您提交I-485表格，安心在美等待绿卡即可。</li>
+			<li> 提交I-485的同时，我们会为您申报I-765及I-131。 I-765申报后90日内可获批复，获批后，您可在拿到绿卡前合法在美工作1-2年。
+				I-131获批后，您可在拿到绿卡前自由出入美国国境。两者在绿卡获批后自动失效。</li>
+		</div> <!-- / tabs_item -->
+	</div> <!-- / tab_content -->
+</div> <!-- / tab -->
+  <script src='/bss/xuanxk/jquery.js'></script>
+  <script src="/bss/xuanxk/index.js"></script> 
+  <!---  查看案例--->
+    <div class="ckcase md w1000"><a href="/cases/"  class="tx" target="_blank" >查看成功案例</a></div>
+		</div>
+		
+<!---底部--->		
+	<div style="margin-top:-20px;">{dede:include filename="footer.htm"/}</div>
+	
+<script src="/bss/jquery.smoove.js"></script>
+<script>$('.block').smoove({offset:'45%'});</script>
+  </body>
+    <!---手机导航--->
+<link rel="stylesheet" type="text/css" href="/bss/sjnav/main.css">
+<script src="/bss/sjnav/jquery-ui.min.js"></script>
+<script src="/bss/sjnav/jquery.simplesidebar.js"></script>
+<!---手机导航--->
+</html>	

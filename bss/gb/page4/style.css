@@ -1,0 +1,84 @@
+@charset "utf-8";
+	.friend {
+
+	margin:0 auto;
+	overflow:hidden;
+	width:1300px;
+}
+.mr_frbox {
+	height:407px;
+    padding-top: 15px;
+}
+.mr_frBtnL {
+	cursor:pointer;
+	display:inline;
+	float:left;
+	height:56px;
+	margin:160px 10px 0 0;
+	width:28px;
+}
+.mr_frBtnL:hover {background:url(/bss/gb/page4/qianxleft2.png) no-repeat;}
+
+
+.mr_frUl {
+	float:left;
+	/*height:202px;
+	width:1047px;*/
+    margin-left: 20px;
+}
+.mr_frBtnR {
+	float:right;
+	margin-top:160px;
+	cursor:pointer;
+	width:28px;
+	height:56px;
+}
+.mr_frBtnR:hover {background:url(/bss/gb/page4/qianxr2.png) no-repeat;}
+
+.mr_frUl ul li {
+	display:inline;
+	float:left;
+	/*height:389px;*/
+	width:300px;
+	overflow:hidden;
+	position:relative;
+}
+#mr_fu li .imga {
+	display: block;
+    border: 10px solid rgba(224, 223, 223, 0.74);
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+    overflow: hidden;}
+
+.mr_frUl ul li a img {
+    display: block;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    transition: all 0.8s ease-in-out;
+    -webkit-transition: all 0.8s ease-in-out;
+}
+.mr_frUl ul li:hover img {
+	width: 290px;
+    height: 290px;
+    margin-top: -10px;
+}
+.gk-text {text-align: center; width: 270px;}
+
+.gk-text dd {
+    font-size: 18px;
+    line-height: 60px;
+    text-align: center;
+    border-bottom: 1px solid #6C6E85;
+    width: 250px;
+    margin: 0 auto;}
+.gk-text p {
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+    padding-top: 10px;
+    width: 250px;
+    margin: 0 auto;}
+
+

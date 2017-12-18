@@ -1,0 +1,1 @@
+INSERT INTO `city_homepageset` VALUES('eb/gb2.htm','../index.html','1');

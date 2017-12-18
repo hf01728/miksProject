@@ -1,0 +1,312 @@
+DROP TABLE IF EXISTS `city_addon18`;
+
+CREATE TABLE `city_addon18` (
+  `aid` int(11) NOT NULL DEFAULT '0',
+  `typeid` int(11) NOT NULL DEFAULT '0',
+  `redirecturl` varchar(255) NOT NULL DEFAULT '',
+  `templet` varchar(30) NOT NULL DEFAULT '',
+  `userip` char(15) NOT NULL DEFAULT '',
+  `webpic` varchar(250) NOT NULL DEFAULT '',
+  `phonepic` varchar(250) NOT NULL DEFAULT '',
+  PRIMARY KEY (`aid`),
+  KEY `typeid` (`typeid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_admintype`;
+
+CREATE TABLE `city_admintype` (
+  `rank` float NOT NULL DEFAULT '1',
+  `typename` varchar(30) NOT NULL DEFAULT '',
+  `system` smallint(6) NOT NULL DEFAULT '0',
+  `purviews` text,
+  PRIMARY KEY (`rank`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_archives`;
+
+CREATE TABLE `city_archives` (
+  `id` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `typeid` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `typeid2` varchar(90) NOT NULL DEFAULT '0',
+  `sortrank` int(10) unsigned NOT NULL DEFAULT '0',
+  `flag` set('c','h','p','f','s','j','a','b') DEFAULT NULL,
+  `ismake` smallint(6) NOT NULL DEFAULT '0',
+  `channel` smallint(6) NOT NULL DEFAULT '1',
+  `arcrank` smallint(6) NOT NULL DEFAULT '0',
+  `click` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `money` smallint(6) NOT NULL DEFAULT '0',
+  `title` char(200) NOT NULL DEFAULT '',
+  `shorttitle` char(36) NOT NULL DEFAULT '',
+  `color` char(7) NOT NULL DEFAULT '',
+  `writer` char(20) NOT NULL DEFAULT '',
+  `source` char(30) NOT NULL DEFAULT '',
+  `litpic` char(100) NOT NULL DEFAULT '',
+  `pubdate` int(10) unsigned NOT NULL DEFAULT '0',
+  `senddate` int(10) unsigned NOT NULL DEFAULT '0',
+  `mid` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `keywords` char(30) NOT NULL DEFAULT '',
+  `lastpost` int(10) unsigned NOT NULL DEFAULT '0',
+  `scores` mediumint(8) NOT NULL DEFAULT '0',
+  `goodpost` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `badpost` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `voteid` mediumint(8) NOT NULL,
+  `notpost` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `description` varchar(255) NOT NULL DEFAULT '',
+  `filename` varchar(40) NOT NULL DEFAULT '',
+  `dutyadmin` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `tackid` int(10) NOT NULL DEFAULT '0',
+  `mtype` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `weight` int(10) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `sortrank` (`sortrank`),
+  KEY `mainindex` (`arcrank`,`typeid`,`channel`,`flag`,`mid`),
+  KEY `lastpost` (`lastpost`,`scores`,`goodpost`,`badpost`,`notpost`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_arctype`;
+
+CREATE TABLE `city_arctype` (
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `reid` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `topid` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `sortrank` smallint(5) unsigned NOT NULL DEFAULT '50',
+  `typename` char(30) NOT NULL DEFAULT '',
+  `typedir` char(60) NOT NULL DEFAULT '',
+  `isdefault` smallint(6) NOT NULL DEFAULT '0',
+  `defaultname` char(15) NOT NULL DEFAULT 'index.html',
+  `issend` smallint(6) NOT NULL DEFAULT '0',
+  `channeltype` smallint(6) DEFAULT '1',
+  `maxpage` smallint(6) NOT NULL DEFAULT '-1',
+  `ispart` smallint(6) NOT NULL DEFAULT '0',
+  `corank` smallint(6) NOT NULL DEFAULT '0',
+  `tempindex` char(50) NOT NULL DEFAULT '',
+  `templist` char(50) NOT NULL DEFAULT '',
+  `temparticle` char(50) NOT NULL DEFAULT '',
+  `namerule` char(50) NOT NULL DEFAULT '',
+  `namerule2` char(50) NOT NULL DEFAULT '',
+  `modname` char(20) NOT NULL DEFAULT '',
+  `description` char(150) NOT NULL DEFAULT '',
+  `keywords` varchar(60) NOT NULL DEFAULT '',
+  `seotitle` varchar(80) NOT NULL DEFAULT '',
+  `moresite` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `sitepath` char(60) NOT NULL DEFAULT '',
+  `siteurl` char(50) NOT NULL DEFAULT '',
+  `ishidden` smallint(6) NOT NULL DEFAULT '0',
+  `cross` tinyint(1) NOT NULL DEFAULT '0',
+  `crossid` text,
+  `content` text,
+  `smalltypes` text,
+  PRIMARY KEY (`id`),
+  KEY `reid` (`reid`,`isdefault`,`channeltype`,`ispart`,`corank`,`topid`,`ishidden`),
+  KEY `sortrank` (`sortrank`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_channeltype`;
+
+CREATE TABLE `city_channeltype` (
+  `id` smallint(6) NOT NULL DEFAULT '0',
+  `nid` varchar(20) NOT NULL DEFAULT '',
+  `typename` varchar(30) NOT NULL DEFAULT '',
+  `maintable` varchar(50) NOT NULL DEFAULT 'city_archives',
+  `addtable` varchar(50) NOT NULL DEFAULT '',
+  `addcon` varchar(30) NOT NULL DEFAULT '',
+  `mancon` varchar(30) NOT NULL DEFAULT '',
+  `editcon` varchar(30) NOT NULL DEFAULT '',
+  `useraddcon` varchar(30) NOT NULL DEFAULT '',
+  `usermancon` varchar(30) NOT NULL DEFAULT '',
+  `usereditcon` varchar(30) NOT NULL DEFAULT '',
+  `fieldset` text,
+  `listfields` text,
+  `allfields` text,
+  `issystem` smallint(6) NOT NULL DEFAULT '0',
+  `isshow` smallint(6) NOT NULL DEFAULT '1',
+  `issend` smallint(6) NOT NULL DEFAULT '0',
+  `arcsta` smallint(6) NOT NULL DEFAULT '-1',
+  `usertype` char(10) NOT NULL DEFAULT '',
+  `sendrank` smallint(6) NOT NULL DEFAULT '10',
+  `isdefault` smallint(6) NOT NULL DEFAULT '0',
+  `needdes` tinyint(1) NOT NULL DEFAULT '1',
+  `needpic` tinyint(1) NOT NULL DEFAULT '1',
+  `titlename` varchar(20) NOT NULL DEFAULT '标题',
+  `onlyone` smallint(6) NOT NULL DEFAULT '0',
+  `dfcid` smallint(5) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `nid` (`nid`,`isshow`,`arcsta`,`sendrank`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_co_onepage`;
+
+CREATE TABLE `city_co_onepage` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `url` varchar(60) NOT NULL DEFAULT '',
+  `title` varchar(60) NOT NULL DEFAULT '',
+  `issource` smallint(6) NOT NULL DEFAULT '1',
+  `lang` varchar(10) NOT NULL DEFAULT 'gb2312',
+  `rule` text,
+  PRIMARY KEY (`id`),
+  KEY `url` (`url`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_diyform1`;
+
+CREATE TABLE `city_diyform1` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `ifcheck` tinyint(1) NOT NULL DEFAULT '0',
+  `name` varchar(250) NOT NULL DEFAULT '',
+  `age` varchar(250) NOT NULL DEFAULT '',
+  `phone` varchar(250) NOT NULL DEFAULT '',
+  `qq` varchar(250) NOT NULL DEFAULT '',
+  `mail` varchar(250) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_erradd`;
+
+CREATE TABLE `city_erradd` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `aid` mediumint(8) unsigned NOT NULL,
+  `mid` mediumint(8) unsigned DEFAULT NULL,
+  `title` char(60) NOT NULL DEFAULT '',
+  `type` smallint(6) NOT NULL DEFAULT '0',
+  `errtxt` mediumtext,
+  `oktxt` mediumtext,
+  `sendtime` int(10) unsigned NOT NULL DEFAULT '0',
+  KEY `id` (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_keywords`;
+
+CREATE TABLE `city_keywords` (
+  `aid` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `keyword` char(16) NOT NULL DEFAULT '',
+  `rank` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `sta` smallint(6) NOT NULL DEFAULT '1',
+  `rpurl` char(60) NOT NULL DEFAULT '',
+  PRIMARY KEY (`aid`),
+  KEY `keyword` (`keyword`,`rank`,`sta`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_member_person`;
+
+CREATE TABLE `city_member_person` (
+  `mid` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `onlynet` tinyint(1) unsigned NOT NULL DEFAULT '1',
+  `sex` enum('男','女','保密') NOT NULL DEFAULT '男',
+  `uname` char(30) NOT NULL DEFAULT '',
+  `qq` char(12) NOT NULL DEFAULT '',
+  `msn` char(50) NOT NULL DEFAULT '',
+  `tel` varchar(15) NOT NULL DEFAULT '',
+  `mobile` varchar(15) NOT NULL DEFAULT '',
+  `place` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `oldplace` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `birthday` date NOT NULL DEFAULT '1980-01-01',
+  `star` smallint(6) unsigned NOT NULL DEFAULT '1',
+  `income` smallint(6) NOT NULL DEFAULT '0',
+  `education` smallint(6) NOT NULL DEFAULT '0',
+  `height` smallint(5) unsigned NOT NULL DEFAULT '160',
+  `bodytype` smallint(6) NOT NULL DEFAULT '0',
+  `blood` smallint(6) NOT NULL DEFAULT '0',
+  `vocation` smallint(6) NOT NULL DEFAULT '0',
+  `smoke` smallint(6) NOT NULL DEFAULT '0',
+  `marital` smallint(6) NOT NULL DEFAULT '0',
+  `house` smallint(6) NOT NULL DEFAULT '0',
+  `drink` smallint(6) NOT NULL DEFAULT '0',
+  `datingtype` smallint(6) NOT NULL DEFAULT '0',
+  `language` set('普通话','上海话','广东话','英语','日语','韩语','法语','意大利语','德语','西班牙语','俄语','阿拉伯语') DEFAULT NULL,
+  `nature` set('性格外向','性格内向','活泼开朗','豪放不羁','患得患失','冲动','幽默','稳重','轻浮','沉默寡言','多愁善感','时喜时悲','附庸风雅','能说会道','坚强','脆弱','幼稚','成熟','快言快语','损人利己','狡猾善变','交际广泛','优柔寡断','自私','真诚','独立','依赖','难以琢磨','悲观消极','郁郁寡欢','胆小怕事','乐观向上','任性','自负','自卑','拜金','温柔体贴','小心翼翼','暴力倾向','逆来顺受','不拘小节','暴躁','倔强','豪爽','害羞','婆婆妈妈','敢做敢当','助人为乐','耿直','虚伪','孤僻','老实','守旧','敏感','迟钝','婆婆妈妈','武断','果断','刻薄') DEFAULT NULL,
+  `lovemsg` varchar(100) NOT NULL DEFAULT '',
+  `address` varchar(50) NOT NULL DEFAULT '',
+  `uptime` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`mid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_member_tj`;
+
+CREATE TABLE `city_member_tj` (
+  `mid` mediumint(8) NOT NULL AUTO_INCREMENT,
+  `article` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `album` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `archives` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `homecount` int(10) unsigned NOT NULL DEFAULT '0',
+  `pagecount` int(10) unsigned NOT NULL DEFAULT '0',
+  `feedback` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `friend` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `stow` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `soft` int(10) NOT NULL DEFAULT '0',
+  `info` int(10) NOT NULL DEFAULT '0',
+  `shop` int(10) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`mid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_moneycard_type`;
+
+CREATE TABLE `city_moneycard_type` (
+  `tid` int(11) NOT NULL AUTO_INCREMENT,
+  `num` int(11) NOT NULL DEFAULT '500',
+  `money` int(11) NOT NULL DEFAULT '50',
+  `pname` varchar(50) NOT NULL DEFAULT '',
+  PRIMARY KEY (`tid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_multiserv_config`;
+
+CREATE TABLE `city_multiserv_config` (
+  `remoteuploads` smallint(6) NOT NULL DEFAULT '0',
+  `remoteupUrl` text NOT NULL,
+  `rminfo` text,
+  `servinfo` mediumtext,
+  PRIMARY KEY (`remoteuploads`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_payment`;
+
+CREATE TABLE `city_payment` (
+  `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
+  `code` varchar(20) NOT NULL DEFAULT '',
+  `name` varchar(120) NOT NULL DEFAULT '',
+  `fee` varchar(10) NOT NULL DEFAULT '0',
+  `description` text NOT NULL,
+  `rank` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `config` text NOT NULL,
+  `enabled` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `cod` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `online` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `code` (`code`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_sys_enum`;
+
+CREATE TABLE `city_sys_enum` (
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `ename` char(30) NOT NULL DEFAULT '',
+  `evalue` char(20) NOT NULL DEFAULT '0',
+  `egroup` char(20) NOT NULL DEFAULT '',
+  `disorder` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `issign` tinyint(1) unsigned NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_sysconfig`;
+
+CREATE TABLE `city_sysconfig` (
+  `aid` smallint(8) unsigned NOT NULL DEFAULT '0',
+  `varname` varchar(20) NOT NULL DEFAULT '',
+  `info` varchar(100) NOT NULL DEFAULT '',
+  `groupid` smallint(6) NOT NULL DEFAULT '1',
+  `type` varchar(10) NOT NULL DEFAULT 'string',
+  `value` text,
+  PRIMARY KEY (`varname`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_taglist`;
+
+CREATE TABLE `city_taglist` (
+  `tid` int(10) unsigned NOT NULL DEFAULT '0',
+  `aid` int(10) unsigned NOT NULL DEFAULT '0',
+  `arcrank` smallint(6) NOT NULL DEFAULT '0',
+  `typeid` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `tag` varchar(12) NOT NULL DEFAULT '',
+  PRIMARY KEY (`tid`,`aid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+

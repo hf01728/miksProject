@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>  
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/bss/style.css" >
+   </head> 
+  <body>  
+<!---头部--->
+<div class="nei-top">
+    <div class="eb3jt nei-site-header" >
+    			{dede:include filename="head.htm"/}
+    		</div>
+    </div>		
+	<!---中间main---->
+	<div class="w100 bgw">
+		<div class="w1000 md clearfix">			
+			<div class="resultbar">以下是搜索 <strong class="fc">{dede:global name='keyword' function='RemoveXSS(@me)'/}</strong> 的结果 </div>		
+		<div class="fl ">
+                       <ul class="news-list" style="padding-bottom: 20px;">
+		{dede:list pagesize="6" }		
+				<li>
+					<!--标签旗帜---><div class="jiaoluo"></div>
+					<div class="tagg" style="color: #fff;"><a>[field:typelink/]</a></div>
+					<div class="tagg1"></div>
+					<!--标题--->
+					<div class="biaotii clearfix">
+						<h2 class="fl"><a href="[field:arcurl/]">[field:title/]</a></h2>
+						<span class="rt">[field:pubdate function="GetDateTimeMK(@me)" /]</span>
+					</div>
+					<!--- 缩略图简介---->
+					<div class="slt"><a href="[field:arcurl/]"><img src="[field:picname/]"></a></div>
+					<div class="zww">[field:description/]... 
+					<br><a href="[field:arcurl/]"> <查看全文> </a>
+					</div>
+					<!-- 关键词---->
+					<div class="gongn clearfix">
+						<div class="tagss rt">本文关键字：  [field:id function=GetTags(@me)/]</div>			
+					</div>
+				</li>
+		{/dede:list}				
+			</ul>
+                 <div class="fye clearfix">{dede:pagelist istitem="index,pre,next,end,info" listsize='5' /}</div>
+		<div class="clear"></div><!---分页END--->	</div>
+				
+			<!--右边--->
+			<div class="wzrt  rt">	
+				<!---搜索框--->
+				<form accept-charset="UTF-8" name="search" action="/plus/search.php" method="get" data-wl-search="form" novalidate="novalidate" class="soso">
+                    <input type="hidden" id="site-search-fuseaction" name="fuseaction" value="search.results">
+                    <div class="input-wrapper">
+                        <div class="content11" data-wl-search="appendTo">
+                            <span class="ico"></span>
+                             <input type="hidden" name="kwtype" value="0" />
+                            <input name="q" type="text" class="input-txt search-validation ui-autocomplete-input hint" id="search-keyword" value="Search..." onfocus="if(this.value=='Search...'){this.value='';}"  onblur="if(this.value==''){this.value='Search...';}" />
+                            <a href="##" class="cancel" data-wl-search="cancel"></a>
+                        <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul></div>
+                    </div>
+                    <input type="submit" class="wl-button input-submit" value="Go">
+                </form>
+				<!---搜索框--->
+							<div class="ltagg">				
+				<h3><a href="/news/">EB3 讲堂</a></h3>
+				<ul class="archive-list">
+					<li><a href="/news/policy/">流程材料</a></li>
+					<li><a href="/news/apply/">社会文化</a></li>
+					<li><a href="/news/gov/">移民新闻</a></li>
+					<li><a href="/cases/">成功案例</a></li>
+					<li><a href="/news/others/">其他</a></li>
+				</ul>
+				</div></div><!--右边 END--->
+			</div>
+	</div>	
+		
+	<div style="margin-top:-20px;">{dede:include filename="news-footer.htm"/}</div>
+  </body>
+</html>	    

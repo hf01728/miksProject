@@ -1,0 +1,325 @@
+DROP TABLE IF EXISTS `city_addon17`;
+
+CREATE TABLE `city_addon17` (
+  `aid` int(11) NOT NULL DEFAULT '0',
+  `typeid` int(11) NOT NULL DEFAULT '0',
+  `redirecturl` varchar(255) NOT NULL DEFAULT '',
+  `templet` varchar(30) NOT NULL DEFAULT '',
+  `userip` char(15) NOT NULL DEFAULT '',
+  PRIMARY KEY (`aid`),
+  KEY `typeid` (`typeid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_admin`;
+
+CREATE TABLE `city_admin` (
+  `id` int(10) unsigned NOT NULL,
+  `usertype` float unsigned DEFAULT '0',
+  `userid` char(30) NOT NULL DEFAULT '',
+  `pwd` char(32) NOT NULL DEFAULT '',
+  `uname` char(20) NOT NULL DEFAULT '',
+  `tname` char(30) NOT NULL DEFAULT '',
+  `email` char(30) NOT NULL DEFAULT '',
+  `typeid` text,
+  `logintime` int(10) unsigned NOT NULL DEFAULT '0',
+  `loginip` varchar(20) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_arcmulti`;
+
+CREATE TABLE `city_arcmulti` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `tagid` char(60) NOT NULL DEFAULT '',
+  `uptime` int(11) NOT NULL DEFAULT '0',
+  `innertext` varchar(255) NOT NULL DEFAULT '',
+  `pagesize` int(11) NOT NULL DEFAULT '0',
+  `arcids` text NOT NULL,
+  `ordersql` varchar(255) DEFAULT NULL,
+  `addfieldsSql` varchar(255) DEFAULT NULL,
+  `addfieldsSqlJoin` varchar(255) DEFAULT NULL,
+  `attstr` text,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_arctiny`;
+
+CREATE TABLE `city_arctiny` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `typeid` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `typeid2` varchar(90) NOT NULL DEFAULT '0',
+  `arcrank` smallint(6) NOT NULL DEFAULT '0',
+  `channel` smallint(5) NOT NULL DEFAULT '1',
+  `senddate` int(10) unsigned NOT NULL DEFAULT '0',
+  `sortrank` int(10) unsigned NOT NULL DEFAULT '0',
+  `mid` mediumint(8) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `sortrank` (`sortrank`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_area`;
+
+CREATE TABLE `city_area` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL DEFAULT '',
+  `reid` int(10) unsigned NOT NULL DEFAULT '0',
+  `disorder` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_diyforms`;
+
+CREATE TABLE `city_diyforms` (
+  `diyid` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL DEFAULT '',
+  `posttemplate` varchar(50) NOT NULL,
+  `viewtemplate` varchar(50) NOT NULL,
+  `listtemplate` varchar(50) NOT NULL,
+  `table` varchar(50) NOT NULL DEFAULT '',
+  `info` text,
+  `public` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`diyid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_downloads`;
+
+CREATE TABLE `city_downloads` (
+  `hash` char(32) NOT NULL,
+  `id` int(10) unsigned NOT NULL DEFAULT '0',
+  `downloads` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`hash`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_flinktype`;
+
+CREATE TABLE `city_flinktype` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `typename` varchar(50) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_homepageset`;
+
+CREATE TABLE `city_homepageset` (
+  `templet` char(50) NOT NULL DEFAULT '',
+  `position` char(30) NOT NULL DEFAULT '',
+  `showmod` tinyint(2) NOT NULL DEFAULT '1'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_member_group`;
+
+CREATE TABLE `city_member_group` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `groupname` varchar(50) NOT NULL,
+  `mid` int(8) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id` (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_member_model`;
+
+CREATE TABLE `city_member_model` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL,
+  `table` varchar(30) NOT NULL,
+  `description` varchar(50) NOT NULL,
+  `state` int(2) NOT NULL DEFAULT '0',
+  `issystem` int(2) NOT NULL DEFAULT '0',
+  `info` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_member_space`;
+
+CREATE TABLE `city_member_space` (
+  `mid` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `pagesize` smallint(5) unsigned NOT NULL DEFAULT '10',
+  `matt` smallint(6) NOT NULL DEFAULT '0',
+  `spacename` varchar(50) NOT NULL DEFAULT '',
+  `spacelogo` varchar(50) NOT NULL DEFAULT '',
+  `spacestyle` varchar(20) NOT NULL DEFAULT '',
+  `sign` varchar(100) NOT NULL DEFAULT '没签名',
+  `spacenews` text,
+  PRIMARY KEY (`mid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_member_stowtype`;
+
+CREATE TABLE `city_member_stowtype` (
+  `stowname` varchar(30) NOT NULL,
+  `indexname` varchar(30) NOT NULL,
+  `indexurl` varchar(50) NOT NULL,
+  PRIMARY KEY (`stowname`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_member_type`;
+
+CREATE TABLE `city_member_type` (
+  `aid` int(11) NOT NULL AUTO_INCREMENT,
+  `rank` int(11) NOT NULL DEFAULT '0',
+  `pname` varchar(50) NOT NULL DEFAULT '',
+  `money` int(11) NOT NULL DEFAULT '0',
+  `exptime` int(11) NOT NULL DEFAULT '30',
+  PRIMARY KEY (`aid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_myad`;
+
+CREATE TABLE `city_myad` (
+  `aid` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `clsid` smallint(5) NOT NULL DEFAULT '0',
+  `typeid` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `tagname` varchar(30) NOT NULL DEFAULT '',
+  `adname` varchar(60) NOT NULL DEFAULT '',
+  `timeset` smallint(6) NOT NULL DEFAULT '0',
+  `starttime` int(10) unsigned NOT NULL DEFAULT '0',
+  `endtime` int(10) unsigned NOT NULL DEFAULT '0',
+  `normbody` text,
+  `expbody` text,
+  PRIMARY KEY (`aid`),
+  KEY `tagname` (`tagname`,`typeid`,`timeset`,`endtime`,`starttime`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_plus`;
+
+CREATE TABLE `city_plus` (
+  `aid` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `plusname` varchar(30) NOT NULL DEFAULT '',
+  `menustring` varchar(200) NOT NULL DEFAULT '',
+  `mainurl` varchar(50) NOT NULL DEFAULT '',
+  `writer` varchar(30) NOT NULL DEFAULT '',
+  `isshow` smallint(6) NOT NULL DEFAULT '1',
+  `filelist` text,
+  PRIMARY KEY (`aid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_scores`;
+
+CREATE TABLE `city_scores` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `titles` char(15) NOT NULL,
+  `icon` smallint(6) unsigned DEFAULT '0',
+  `integral` int(10) NOT NULL DEFAULT '0',
+  `isdefault` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `integral` (`integral`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_search_keywords`;
+
+CREATE TABLE `city_search_keywords` (
+  `aid` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `keyword` char(30) NOT NULL DEFAULT '',
+  `spwords` char(50) NOT NULL DEFAULT '',
+  `count` mediumint(8) unsigned NOT NULL DEFAULT '1',
+  `result` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `lasttime` int(10) unsigned NOT NULL DEFAULT '0',
+  `channelid` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `typeid` smallint(5) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`aid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_shops_delivery`;
+
+CREATE TABLE `city_shops_delivery` (
+  `pid` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `dname` char(80) NOT NULL,
+  `price` float(13,2) NOT NULL DEFAULT '0.00',
+  `des` char(255) DEFAULT NULL,
+  `orders` int(10) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`pid`),
+  KEY `orders` (`orders`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_softconfig`;
+
+CREATE TABLE `city_softconfig` (
+  `downtype` smallint(6) NOT NULL DEFAULT '0',
+  `ismoresite` smallint(6) NOT NULL DEFAULT '0',
+  `gotojump` smallint(6) NOT NULL DEFAULT '0',
+  `islocal` smallint(5) unsigned NOT NULL DEFAULT '1',
+  `sites` text,
+  `downmsg` text,
+  `moresitedo` smallint(5) unsigned NOT NULL DEFAULT '1',
+  `dfrank` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `dfywboy` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `argrange` smallint(5) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`downtype`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_stepselect`;
+
+CREATE TABLE `city_stepselect` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `itemname` char(30) DEFAULT NULL,
+  `egroup` char(20) DEFAULT NULL,
+  `issign` tinyint(1) unsigned DEFAULT '0',
+  `issystem` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_sys_module`;
+
+CREATE TABLE `city_sys_module` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `hashcode` char(32) NOT NULL DEFAULT '',
+  `modname` varchar(30) NOT NULL DEFAULT '',
+  `indexname` varchar(20) NOT NULL DEFAULT '',
+  `indexurl` varchar(30) NOT NULL DEFAULT '',
+  `ismember` tinyint(4) NOT NULL DEFAULT '1',
+  `menustring` text,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_tagindex`;
+
+CREATE TABLE `city_tagindex` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `tag` char(12) NOT NULL DEFAULT '',
+  `typeid` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `count` int(10) unsigned NOT NULL DEFAULT '0',
+  `total` int(10) unsigned NOT NULL DEFAULT '0',
+  `weekcc` int(10) unsigned NOT NULL DEFAULT '0',
+  `monthcc` int(10) unsigned NOT NULL DEFAULT '0',
+  `weekup` int(10) unsigned NOT NULL DEFAULT '0',
+  `monthup` int(10) unsigned NOT NULL DEFAULT '0',
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_uploads`;
+
+CREATE TABLE `city_uploads` (
+  `aid` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `arcid` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `title` char(60) NOT NULL DEFAULT '',
+  `url` char(80) NOT NULL DEFAULT '',
+  `mediatype` smallint(6) NOT NULL DEFAULT '1',
+  `width` char(10) NOT NULL DEFAULT '',
+  `height` char(10) NOT NULL DEFAULT '',
+  `playtime` char(10) NOT NULL DEFAULT '',
+  `filesize` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `uptime` int(10) unsigned NOT NULL DEFAULT '0',
+  `mid` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`aid`),
+  KEY `memberid` (`mid`),
+  KEY `arcid` (`arcid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `city_vote`;
+
+CREATE TABLE `city_vote` (
+  `aid` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `votename` varchar(50) NOT NULL DEFAULT '',
+  `starttime` int(10) unsigned NOT NULL DEFAULT '0',
+  `endtime` int(10) unsigned NOT NULL DEFAULT '0',
+  `totalcount` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `ismore` tinyint(6) NOT NULL DEFAULT '0',
+  `isallow` tinyint(6) NOT NULL DEFAULT '0',
+  `view` tinyint(6) NOT NULL DEFAULT '0',
+  `spec` int(20) unsigned NOT NULL DEFAULT '0',
+  `isenable` tinyint(6) NOT NULL DEFAULT '0',
+  `votenote` text,
+  PRIMARY KEY (`aid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+

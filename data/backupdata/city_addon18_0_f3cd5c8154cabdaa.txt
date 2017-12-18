@@ -1,0 +1,2 @@
+INSERT INTO `city_addon18` VALUES('137','15','','','111.140.53.223','/bss/gb/hd/city.jpg','/bss/gb/hd/city2.jpg');
+INSERT INTO `city_addon18` VALUES('138','15','','','111.140.53.223','/bss/gb/img/fly.jpg','/bss/gb/img/fly2.jpg');

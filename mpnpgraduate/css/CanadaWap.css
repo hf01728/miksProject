@@ -1,0 +1,654 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+img {
+    border: none;
+}
+ul,li {
+    list-style: none;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.clear {
+    clear: both;
+    font-size: 0px;
+    height: 0px;
+    line-height: 0px;
+}
+.loading{
+    position: fixed;
+    top: 0;
+    left:0;
+    width:100%;
+    height:5px;
+    background-color: green;
+}
+body{
+    max-width: 750px;
+    width: 100%;
+    margin:0 auto;
+    background: #fff;
+    font-size:14px;
+    color: #3e3a39;
+    position: relative;
+}
+/*头部 S*/
+.logo{
+}
+.logo a img:first-child{
+    width:30%;
+    margin:1.5% 0 1.5% 5%;
+    vertical-align: top;
+}
+.logo img:last-child{
+    width:35%;
+    margin-left: 10%;
+    margin-top:4.5%;
+}
+.banner img{
+    display: block;
+    width:100%;
+}
+.nav{
+    width:100%;
+}
+.nav_fixed{
+    position: fixed;
+    top:0;
+    z-index: 5;
+    border-bottom:2px solid  rgba(255,255,255,.6);
+}
+.nav li{
+    float: left;
+    text-align: center;
+    width:calc(25% - 1px);
+    border-right:1px solid #fff;
+    color: #fff;
+    line-height:2.2rem;
+    background: #e6212a;
+    font-weight: normal;
+}
+.nav li:last-child{
+     width:25%;
+     border-right:0;
+}
+.nav li:hover{
+    background-color: #fff;
+    color: #3e3a39;
+    box-shadow: 0 0px 1px #fce5e6;
+}
+/*头部 E*/
+/*主要内容 S*/
+.main{
+    background: #e7e9e8;
+    padding: 3% 3% 0;
+    clear: both;
+}
+.main h2{
+    text-align: center;
+    font-size:1rem;
+    line-height: 3rem;
+    color: #3e3a39;
+ }
+.main h2 img{
+    width: 5%;
+    vertical-align: middle;
+    margin:-4px 3% 0;
+}
+.main .container1{
+    background: #fff;
+    padding: 0% 2.5% 2.5%;
+    overflow: hidden;
+}
+.container1 .left{
+    width:35%;
+}
+.container1 .left img{
+    width:100%;
+    display: block;
+}
+.container1 .right{
+    width:62.5%;
+    font-size: .78rem;
+    line-height: 1rem;
+    margin-top: -2px;
+    margin-bottom: 3%;
+}
+.container1 .right p{
+    word-break:break-all;
+    color: #666;
+}
+.container1 .link{
+    color: #e6212a;
+    clear: both;
+    text-align: center;
+}
+.container1 .link a{
+    display: inline-block;
+    width:30%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+.container1 .link a img{
+    width:100%;
+    display: block;
+}
+.container2{
+    margin:3% -3.2%;
+    background:#670000 url("../images/more.png") no-repeat ;
+    background-size: 100%;
+}
+.container2 .wrap{
+    width:94%;
+    margin:0 auto;
+    background:#550000 url("../images/more2.png") no-repeat ;
+    background-size: 100%;
+    padding-top: 3px;
+}
+.container2 .wrap .duo {
+    text-align: center;
+}
+.container2 .wrap .duo img{
+    width: 23%;
+}
+.container2 .wrap h2{
+    width:50%;
+    margin:0 auto;
+    color: #fff;
+    position: relative;
+}
+.container2 .wrap h2 a{
+    position: relative;
+    z-index:1;
+    padding: 0 3%;
+    background: #ac0000;
+}
+.container2 .wrap h2 a.bg{
+    background: linear-gradient(-270deg,#940000,#a30001);
+}
+.container2 .wrap h2::after{
+    content:"";
+    position: absolute;
+    top:45%;
+    left:0;
+    width:100%;
+    height:1px;
+    background-color: #fff;
+    z-index: 0;
+}
+.container2 .wrap .choice2{
+    background: #c51419;
+    padding: 3% 3% 0;
+    overflow: hidden;
+}
+.container2 .wrap .choice2 li{
+    width: 48.5%;
+    float: left;
+    margin-right:3%;
+    margin-bottom: 3%;
+}
+.container2 .wrap .choice2 li:nth-child(2n){
+    margin-right:0;
+}
+.container2 .wrap .choice2 li img{
+    width: 100%;
+    display: block;
+}
+.container2 .wrap .choice3{
+    padding-top: 3%;
+    padding-bottom: 1%;
+}
+.container2 .wrap .choice3 img{
+    width:100%;
+    display: block;
+}
+.container2 .wrap .choice3 .bg{
+    position: relative;
+    margin-bottom: 2%;
+    color: #fff;
+    font-size: .8rem;
+}
+.container2 .wrap .choice3 .bg ul{
+    position: absolute;
+    top:0;
+    left:32%;
+    line-height: 1.2rem;
+    padding:3% 0;
+}
+.container2 .wrap .choice3 .bg:nth-child(2) ul{
+    position: absolute;
+    top:0;
+    left:6%;
+    line-height: 1.2rem;
+    padding:3% 0;
+}
+.container2 .wrap .choice3 .bg small{
+    font-size:.6rem;
+}
+.professional{
+    padding:3% 3% 2%;
+    overflow: hidden;
+    background: #cf1419;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+.professional ul{
+    width:2000px;
+}
+.professional li{
+    float: left;
+    width: 6%;
+    margin-right: 10px;
+}
+.professional li img{
+    width: 100%;
+}
+
+.container3{
+    margin-top:3%;
+}
+.container3 .schoolInfo2 {
+    border-top:1px dashed #ddd;
+    overflow: hidden;
+    clear: both;
+    padding-top: 3%;
+}
+.container3 .left{
+    width:46%;
+    text-align: center;
+}
+.container3 .right {
+    width: 51.5%;
+    margin-top: 0;
+}
+
+.container4{
+    margin-top:3%;
+    background: #fff;
+    padding: 0% 2.5% 5%;
+    overflow: hidden;
+}
+.container4 ul{
+    margin-top:3%;
+}
+.container4 li{
+    float: left;
+    width: 23%;
+    height: 0;
+    padding-top: calc(23% - 14px);
+    border-radius: 100%;
+    border: 7px solid #e1e1e1;
+    box-sizing: border-box;
+    position: relative;
+    margin-right:2.66%;
+    text-align: center;
+    background: #c10623;
+    color: #fff;
+}
+.container4 li a{
+    display: block;
+    color: #fff;
+}
+.container4 li a:hover{
+    color: #c10621;
+}
+.container4 li:last-child{
+    margin-right:0;
+}
+.container4 li .middle{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+.container4 li .middle:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    height: 100%;
+    width: 0;
+    overflow: hidden;
+}
+.container4 li .middle div {
+    position: absolute;
+    left: 0;
+    top: 20%;
+    right: 0;
+    text-align: center;
+}
+.container4 li .middle div i{
+    font-style: normal;
+    font-size: .7rem;
+    font-weight:bold;
+}
+.container4 li .middle div p{
+    font-size: .9rem;
+    font-weight:bold;
+}
+.container4 li:hover{
+    border-color: #c10621;
+    background-color: #fff;
+    color: #c10621;
+}
+
+.container5{
+    margin:3% -3.2% 0;
+    background: #e6212a;
+}
+.container5 h2{
+    color: #fff;
+}
+.container5 h2 img{
+    width:3.5%;
+}
+.immiAdvantageWrap{
+    padding:0 3% 3%;
+    overflow: hidden;
+    color: #fff;
+    margin-right: 3%;
+}
+.immiAdvantage{
+    width:2000px;
+}
+.immiAdvantage>ul>li{
+    float: left;
+    width:6%;
+    margin-right: 10px;
+    padding:5px 5px 0;
+    background-color: #fff;
+    color: #595757;
+}
+.immiAdvantage>ul>li p{
+    text-align: center;
+    color: #af1a2d;
+    font-size: .8rem;
+    line-height:1.2rem;
+}
+.immiAdvantage>ul>li img{
+    width: 100%;
+}
+.immiAdvantage>ul>li dl{
+    font-size: .7rem;
+    height: 4rem;
+    line-height: .8rem;
+    margin-top: 5px;
+    padding: 0 1%;
+}
+.immiAdvantage>ul>li dd small{
+    width: 4px;
+    height:4px;
+    border-radius: 50%;
+    background:#595757;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+.immiAdvantage>ul>li dd .text{
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 8px);
+}
+
+.container6{
+    margin-top:3%;
+    background: #fff;
+    padding:0% 3% 4%;
+    font-size: .78rem;
+    line-height: 1.2rem;
+    color: #595757;
+}
+.container6 h2{
+    position: relative;
+}
+.container6 h2 a{
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+    padding: 0 3%;
+}
+.container6 h2::after{
+    content:"";
+    position: absolute;
+    top:45%;
+    left:0;
+    width:100%;
+    height:1px;
+    background-color: #3e3a39;
+    z-index: 0;
+}
+
+.advantage{
+    box-shadow: 0 0 10px #999;
+    font-size:.8rem;
+    background: #f3f3ea;
+    margin-top: .5rem;
+    padding-bottom: 4%;
+}
+.advantage h3{
+    text-align: center;
+    line-height: 2rem;
+    font-weight:normal;
+    color: #3e3a39;
+    background: #fff;
+}
+.advantage p{
+    background: #e6212a;
+    color: #fff;
+    text-align: center;
+    line-height: 1.5rem;
+}
+.advantage .chart{
+    text-align: center;
+}
+.advantage .chart img{
+    width:90%;
+}
+.advantageCon{
+    padding: 0 3% 3%;
+    overflow: hidden;
+    height: 7.2rem;
+}
+.advantageCon .left{
+    padding: 4.5%;
+    background:#c10623;
+    color: #fff;
+    width:5%;
+    height:100%;
+    text-align: center;
+    font-weight:bold;
+    font-size: .88rem;
+    line-height:1.3rem;
+}
+.advantageCon .right{
+    width: 84%;
+    height:100%;
+    padding: 4.5% 0 0 1%;
+    background:#e6212a;
+    font-size: .85rem;
+    color: #fff;
+    line-height:1.6rem;
+}
+.advantageCon .right ul{
+
+}
+.advantageCon .right li img{
+    width:14px;
+    vertical-align: top;
+    margin-top: 4px;
+    margin-right:2px;
+}
+
+.container7{
+    background:#fff url("../images/contact.png") no-repeat center bottom;
+    background-size: 80%;
+    text-align: center;
+    margin-top:3%;
+    padding-top: 4%;
+    font-size: 1.1rem;
+    line-height:1rem;
+}
+.container7 .code img{
+    width:20%;
+}
+.phoneAndQq{
+    font-size: .7rem;
+    line-height:2rem;
+    text-align: left;
+    padding-left: 3%;
+    position: relative;
+}
+.phoneAndQq img:first-child{
+    width:5%;
+    vertical-align: middle;
+}
+.phoneAndQq img:last-child{
+    width:16%;
+}
+iframe{
+    transform: scale(.65)!important;
+    position: absolute!important;
+    right:-2%!important;
+    bottom:8px!important;
+}
+/*主要内容 E*/
+
+/*底部 S*/
+.footer{
+    background: #595757;
+    font-size: .55rem;
+    text-align: center;
+    color: #fff;
+    padding:1.5% 0;
+    line-height:.9rem ;
+    margin-bottom:3rem;
+}
+.bottomFixed{
+    position: fixed;
+    background: #e6212a;
+    bottom:0;
+    width:100%;
+    overflow: hidden;
+    color: #fff;
+    z-index: 5;
+}
+.bottomFixed li{
+    float: left;
+    width:50%;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 3rem;
+}
+.bottomFixed li:first-child{
+    width:calc(50% - 1px);
+    border-right:1px solid #fff;
+}
+.bottomFixed a li {
+    width:50%;
+    border-right:1px solid #fff;
+}
+.bottomFixed li img {
+    width:10%;
+    vertical-align: middle;
+    margin-right: 3%;
+    margin-top: -3px;
+}
+.bottomFixed a{
+    color: #fff;
+}
+/*底部 E*/
+
+/*移民评估浮动窗 S*/
+.MessageBG {
+    background: rgba(0,0,0,.5);
+    position: fixed;
+    z-index: 6;
+    top:-0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.MessageBook{
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    right: 0;
+    margin:auto;
+    width:90%;
+    height:80%;
+    z-index:7;
+    display: none;
+}
+.evaluateIframe{
+    transform: scale(1)!important;
+    position: static!important;
+    border: 1px solid #fff;
+}
+.MessageBook .Close{
+    width:30px;
+    height:30px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 8;
+    top:-10px;
+    right:-10px;
+    background:rgb(205, 29, 31);
+    text-align: center;
+    font-size: 24px;
+    line-height:30px;
+    border:1px solid #fff;
+    color: #fff;
+}
+/*移民评估浮动窗 E*/
+
+/*QQ右浮动*/
+.QQFixed{
+    position: fixed;
+    right:-25px;
+    top:65%;
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    background: url("../images/QQLogo.png") no-repeat center center;
+    background-size: 80%;
+}
+.QQFixedWrap{
+    display: none;
+}
+.QQFixed img{
+    width: 40px;
+}
+.QQFixedCon {
+    padding-top: 5px;
+    width:100%;
+    height:100%;
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.7);
+    color: #fff;
+    text-align: center;
+    font-size: .8rem;
+    line-height: 20px;
+}
+.QQFixed iframe{
+    transform: scale(3) !important;
+    opacity: 0;
+}

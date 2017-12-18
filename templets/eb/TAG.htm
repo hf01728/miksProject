@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>  
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/bss/style.css" >
+   </head> 
+
+<!-----网页开始----->
+ <body>  
+<!---头部--->
+<div class="nei-top">
+    <div class="eb3jt nei-site-header" >
+    			{dede:include filename="head.htm"/}
+    		</div>
+    </div>		
+<!-----头部结束----->			
+<div class="w100 bgw">
+		<div class="w1000 md clearfix" style="padding: 20px 0px 50px 20px;font-size: 13px;">
+			<div style="text-align: left;float: left: 10px 35px 10px 30px;">
+				<div><h2>文章Tag标签</h2></div><br>
+				<dl>
+					<dt><strong>最新标签</strong></dt>
+					<dd>
+						{dede:tag row='60' sort='new'}
+						<a href='[field:link/]' class='tagc[field:highlight /]'>[field:tag /]</a>
+						{/dede:tag}
+					</dd>
+				</dl><br>
+				
+				<dl>
+					<dt><strong>当月热门标签</strong></dt>
+					<dd>
+						{dede:tag row='60' sort='month'}
+						<a href='[field:link/]' class='tagc[field:highlight /]'>[field:tag /]</a>
+						{/dede:tag}
+					</dd>
+				</dl><br>
+	
+		<dl>
+			<dt><strong>随机标签</strong></dt>
+			<dd>
+            {dede:tag row='100' sort='rand'}
+            <a href='[field:link/]' class='tagc[field:highlight /]' target="_blank">[field:tag /]</a>
+            {/dede:tag}
+			</dd>
+		</dl>
+</div>	
+
+</div>
+</div>
+	<!--- footer---->
+<div style="margin-top:-20px;padding-bottom: 20px;">{dede:include filename="news-footer.htm"/}</div>
+</BODY></HTML>

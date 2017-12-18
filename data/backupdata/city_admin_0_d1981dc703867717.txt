@@ -1,0 +1,1 @@
+INSERT INTO `city_admin` VALUES('1','10','eb3','9e5b2b271876c9e9de08','admin','','','','1490076662','14.20.90.122');

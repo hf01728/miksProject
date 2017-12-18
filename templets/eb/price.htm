@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html>  
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>    
+    <title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:field name='description'  function='html2text(@me)'/}" />
+    <meta name="keywords" content="{dede:field name='keywords'/}" />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/bss/style.css" >
+  <!-- top---->
+  <script type="text/javascript" src="/bss/top/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript">
+	$(document).ready(function(){
+	//首先将#back-to-top隐藏
+	$("#back-to-top").hide();
+	//当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
+	$(function () {
+		$(window).scroll(function(){
+		if ($(window).scrollTop()>100){
+		$("#back-to-top").fadeIn(1500);
+		}
+		else
+		{
+		$("#back-to-top").fadeOut(1500);
+		}
+		});
+		//当点击跳转链接后，回到页面顶部位置
+		$("#back-to-top").click(function(){
+		$('body,html').animate({scrollTop:0},1000);
+		return false;
+		});
+		});
+		});
+  </script>      
+   </head>
+ 
+  <body id="top">
+  	<!--手机导航--><div class="sj-wrapper">
+        	<div class="toolbar">
+        		<div id="open-sb" class="menu-button menu-left"></div>
+        	</div>
+        	<section class="sidebar">
+        		<nav>
+        			<h6>网站导航</h6>
+        			<ul>
+        				<li><a href="/" >首页</a></li>
+        				<li><a href="/company/">公司与项目</a></li>        				
+        				<li><a href="/procedures/">案例与流程</a></li>
+        				<li><a href="/service/">价格与服务</a></li>
+        				<li><a href="/news/">EB3讲堂</a></li>
+        				<li><a href="/contact/">联系预约</a></li>        				
+        			</ul>
+        		  </nav>
+        	</section></div><script>
+$( document ).ready(function() {
+	$.ajaxSetup({
+		cache: false
+	});
+	$( '.sidebar' ).simpleSidebar({
+		settings: {
+			opener: '#open-sb',
+			wrapper: '.wrapper',
+			animation: {
+				duration: 500,
+				easing: 'easeOutQuint'
+			}
+		},
+		sidebar: {
+			align: 'left',
+			width: 200,
+			closingLinks: 'a',
+		}
+	});
+});
+</script><!--手机导航-->
+  <p id="back-to-top"><a href="#top"><span></span></a></p>  
+<!---头部--->
+<div class="nei-top">
+    <div class="fuwu nei-site-header" >
+    			{dede:include filename="head.htm"/}
+    		</div>
+    	<div class="price-biaoyu">
+			<div class="txxt">
+				<div class="wenzi">				
+					<h1 class="biaoyu_title">全国最低中介费承诺</h1>
+					 <p>填写网站移民咨询问卷，为您量身定制付款方案。</p>
+<!---
+					 <a href="/"  target="_blank" class="txwj">立刻申请</a>
+-->
+				</div>
+			</div>
+		</div> 
+    </div>
+	<!--第一层--->
+	<div class="w100">
+			<div class="p-one clearfix md w1000">
+				<div class="limiter fl">
+					<p class="p">超低首付，只需1万美元，安全开启移民申请。</p>
+					<div class="space"><span>签约雇主合同后加签律所合同，双重合同双重保险</span></div>
+					<div class="space"><span>免费添加、变更家庭成员，没有隐形收费和霸王条款</span></div>
+					<div class="space"><span>来自律所的EB3专家亲自担任客服，准确解答您99%的疑问</span></div>
+					<div class="space"><span>加入温馨热闹的工友QQ社区，与未来工友提前相识，共同追梦</span></div>
+					<div class="space"><span>提前准备抽查和各种材料，最优化的流程，减少等待焦虑</span></div>
+					<div class="space"><span>递案前多重查错，确保信息100%准确，申请一次性通过</span></div>
+					<div class="coll"><a href="/contact/">现在去申请</a></div>
+					</div>
+				<div class="peitu rt"><img src="/bss/neiye/peitu.png"></div>
+				</div>
+			</div><!--第一层  END--->	
+			<!--第二层 开始--->
+			<div class="p-two">
+				<div class="two-main w1000 md">
+					<div class="two-txt fl">
+						<h2>携手美国本土服务业精英<br>为您提供登陆后的房产及财务规划等中文增值服务</h2>
+					</div>
+				</div>
+			</div>
+			<!--第二层  END--->
+		<!--第三层问答 --->	
+		<div class="w100" id="qa">
+			<div class="p-QA clearfix md w1000">
+				<p class="QA-title">常见问题Q&A</p>
+				<div class="kuang">
+					<ul class="wdleft clearfix">
+						<li>
+							<span>对申请人有什么要求？</span>
+							<p>年龄最好不要超过45岁，并且身体健康（以能通过移民体检为准），无犯罪记录。</p>
+						</li>
+						<li>
+							<span>办理期间生了孩子或者家属有变动怎么办？</span>
+							<p>我们会免费为您添加、改动家属信息，主申请人的家庭成员变动不影响申请。</p>
+						</li>
+						<li>
+							<span>我没有任何工作经验能申请么？</span>
+							<p>完全可以，我们有不少客户是在读或刚毕业的大学生，也有很早就全职做家庭主妇，没有任何工作经验的客户。</p>
+						</li>
+						<li>
+							<span>可不可以在美国等排期？</span>
+							<p>理论上可行，但是排期漫长，在美维系合法身份的成本过高，因此不推荐这么做。</p>
+						</li>
+						<li>
+							<span>EB3申请后等待期间影响赴美签证么？</span>
+							<p>主申的移民请愿I140被批准后，签证处就知道了您的移民倾向，这时申请B1/B2等非工作签证时拒签可能性都会加大。H1B工作签证不受移民倾向影响。</p>
+						</li>
+						<li>
+							<span>如何计算孩子的年龄？</span>
+							<p>只有签证中心认定的21岁及以下的孩子可以随同移民。一般来说，子女的年龄大致可以静止在律所提交DS-260表格那一天。这个年龄减去等待1-140审批的时间就是签证中心计算出的您孩子的年龄。</p>
+						</li>						 
+						<li>
+							<span>登陆美国后有人接待么？</span>
+							<p>雇主有专人接待。</p>
+						</li>
+						<li>
+							<span>雇主包吃住么，上班有班车么？</span>
+							<p>吃住需要自行解决，上下班一般需要您自己开车通勤。</p>
+						</li>
+						<li>
+							<span>党员可以申请么？</span>
+							<p>最好能够退党。</p>
+						</li>
+						<li>
+							<span>曾经参过军可以申请么？</span>
+							<p>不是敏感兵种都可以。</p>
+						</li>
+						<li>
+							<span>需要单位提供材料么？</span>
+							<p>不需要。</p>
+						</li>
+						<li>
+							<span>同时申请了其他国家的移民项目，影响申请么？</span>
+							<p>不影响。</p>
+						</li>
+						<li>
+							<span>之前申请美国签证/移民被拒了，影响EB3申请么？</span>
+							<p>请联系我们为您做具体的咨询和分析。</p>
+						</li>
+						<li>
+							<span>可以去律所或者雇主工厂参观么？</span>
+							<p>请联系我们进行预约。</p>
+						</li>
+						<li>
+							<span>什么时候能拿到绿卡？</span>
+							<p>登陆后2个月左右绿卡会邮寄到律所，律所为确保您为雇主忠实劳动，会为您保存绿卡，做工满半年左右发给您。如果您希望律所收到绿卡后马上拿到绿卡，可以全家每人交2000美金押金换取绿卡，做工满半年后退还押金。</p>
+						</li>
+						<li>
+							<span>小三阳影响申请么？</span>
+							<p>身体健康以移民体检的结果为准。目前，小三阳是能够通过移民体检的，不影响申请。大三阳患者无法通过移民体检。</p>
+						</li>
+						</div>
+					</div>
+				</div>
+			</div>	
+				<!--第三层  END--->	
+<!---底部--->		
+	<div style="margin-top:-20px;">{dede:include filename="footer.htm"/}</div>
+	
+<script src="/bss/jquery.smoove.js"></script>
+<script>$('.block').smoove({offset:'45%'});</script>
+  </body>
+    <!---手机导航--->
+<link rel="stylesheet" type="text/css" href="/bss/sjnav/main.css">
+<script src="/bss/sjnav/jquery-ui.min.js"></script>
+<script src="/bss/sjnav/jquery.simplesidebar.js"></script>
+<!---手机导航--->
+</html>	

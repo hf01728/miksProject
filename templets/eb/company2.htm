@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>  
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    
+    <title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:field name='description'  function='html2text(@me)'/}" />
+    <meta name="keywords" content="{dede:field name='keywords'/}" />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/bss/style.css" >
+<!---公司与项目页弹出JS---->
+    <script type="text/javascript" src="/bss/xiangmu/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/bss/xiangmu/jquery.lightbox.css" />
+  <!--[if IE 6]>
+  <link rel="stylesheet" type="text/css" href="js/lightbox/themes/default/jquery.lightbox.ie6.css" />
+  <![endif]-->
+  <script type="text/javascript" src="/bss/xiangmu/jquery.lightbox.min.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($){
+      $('.lightbox').lightbox();
+    });
+  </script>
+   <!-- top---->
+  <script type="text/javascript">
+	$(document).ready(function(){
+	//首先将#back-to-top隐藏
+	$("#back-to-top").hide();
+	//当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
+	$(function () {
+		$(window).scroll(function(){
+		if ($(window).scrollTop()>100){
+		$("#back-to-top").fadeIn(1500);
+		}
+		else
+		{
+		$("#back-to-top").fadeOut(1500);
+		}
+		});
+		//当点击跳转链接后，回到页面顶部位置
+		$("#back-to-top").click(function(){
+		$('body,html').animate({scrollTop:0},1000);
+		return false;
+		});
+		});
+		});
+  </script>      
+   </head> 
+
+  <body id="top">
+  <p id="back-to-top"><a href="#top"><span></span></a></p>
+    <div class="nei-top">
+    		<div class="nei-site-header" >
+    			{dede:include filename="head.htm"/}
+    		</div>
+    </div>
+	<!--第一层--->
+	<div class="factory">
+		<div class="md w1000 f-inner">
+			<h2 class="tit">雇主公司介绍</h2>
+			<p class="farms">Case Farms公司成立于1986年12月，目前已成为全美知名的大型禽肉加工公司，在俄亥俄州及北卡罗来纳州共有5个厂区。
+				公司员工逾3000人，每年可生产超过9亿磅的鸡肉产品。截至2014年，公司已经为500多个中韩家庭递交了EB3申请。<br>两个招工厂址分别为：
+				<a href="#carolina" class="chang">North Carolina州 Morganton市</a> 和 <a href="#ohio" class="chang">Ohio州 Winesburg市</a> </p>
+					<!--- 弹出----->
+					<div id="content">
+						<!--DEMO start-->
+						<p>  	 
+							<a href="/gsxmu/farmjs.htm?lightbox[iframe]=true&lightbox[width]=930&lightbox[height]=530" class="ckjs lightbox" rel="group1">
+								查看公司详细介绍</a>
+							</p><!--DEMO end-->
+					</div>
+					<!--  弹出END --->				
+					</div>
+				</div>
+  <!--第二层--->
+              <div class="sect_vision">
+              	<div class="md w1118">
+              		<!--Morganton市---->
+              		<h2 class="tit">North Carolina州 Morganton市</h2>
+              		<ul class="fours clearfix" id="canton">              			
+              			<li><a href="/gsxmu/morga_dili.htm?lightbox[iframe]=true&lightbox[width]=930&lightbox[height]=530" class="alk lightbox" rel="group1">
+              				<p class="dili">地理位置</p>
+              				<img src="/bss/neiye/dl1.jpg">
+              				<p class="tt">工作地点、地理方位、城市介绍等</p>
+              			</a></li>
+              			<li><a href="/gsxmu/morga_zf.htm?lightbox[iframe]=true&lightbox[width]=930&lightbox[height]=530" class="alk lightbox" rel="group1">
+              				<p class="dili">附近住宿</p>
+              				<img src="/bss/neiye/zf.jpg">
+              				<p class="tt">工厂附近租房信息、房源价格等</p>
+              			</a></li>
+              			<li><a href="/gsxmu/morga_jyu.htm?lightbox[iframe]=true&lightbox[width]=700&lightbox[height]=330" class="alk lightbox" rel="group1">
+              				<p class="dili">教育学校</p>
+              				<img src="/bss/neiye/xx.jpg">
+              				<p class="tt">学校数量、在读学生等</p>
+              			</a></li>
+              			<li><a href="/gsxmu/morga_qw.htm?lightbox[iframe]=true&lightbox[width]=930&lightbox[height]=530" class="alk lightbox" rel="group1">
+              				<p class="dili">气候温度</p>
+              				<img src="/bss/neiye/wd.jpg">
+              				<p class="tt">平均气温等</p>
+              			</a></li>
+              		</ul>
+              		<!--Ohio州 Canton市---->
+              		<h2 class="tit" id="ohio">Ohio州 Canton市（离winesburg通勤车程半小时）</h2>
+              		<ul class="fours clearfix">              			
+              			<li><a href="/gsxmu/canton_dili.htm?lightbox[iframe]=true&lightbox[width]=930&lightbox[height]=530" class="alk lightbox" rel="group1">
+              				<p class="dili">地理位置</p>
+              				<img src="/bss/neiye/dl2.jpg">
+              				<p class="tt">工作地点、地理方位、城市介绍等</p>
+              			</a></li>
+              			<li><a href="/gsxmu/canton_zsu.htm?lightbox[iframe]=true&lightbox[width]=930&lightbox[height]=530" class="alk lightbox" rel="group1">
+              				<p class="dili">附近住宿</p>
+              				<img src="/bss/neiye/zf2.jpg">
+              				<p class="tt">工厂附近租房信息、房源价格等</p>
+              			</a></li>
+              			<li><a href="/gsxmu/canton_xuex.htm?lightbox[iframe]=true&lightbox[width]=700&lightbox[height]=330" class="alk lightbox" rel="group1">
+              				<p class="dili">教育学校</p>
+              				<img src="/bss/neiye/xx2.jpg">
+              				<p class="tt">学校数量、在读学生等</p>
+              			</a></li>
+              			<li><a href="/gsxmu/canton_qiw.htm?lightbox[iframe]=true&lightbox[width]=930&lightbox[height]=530" class="alk lightbox" rel="group1">
+              				<p class="dili">气候温度</p>
+              				<img src="/bss/neiye/wd2.jpg">
+              				<p class="tt">平均气温等</p>
+              			</a></li>
+              		</ul>
+              		
+              	</div>
+              </div>
+              <div class="vision"><img src="/bss/neiye/vision-bg.png"></div>
+           <!--第三层----->
+             <div class="sect_lv">
+             	<div class="w1000 md">
+             		<h2 class="tit">律所 & 招工公司</h2>
+             		<div class="lvshi">
+             			<span>魏珍喜律师</span>
+             			<p class="js">作为独家代理 Case Farms 公司雇佣海外劳工的移民律师，魏珍喜律师（韩裔，姓名为音译）自2006 年起已经为近600名中韩的申请者办理了EB3移民申请，各个步骤成功率近100%，是雇主担保移民和投资移民领域的专家，在业内广受赞誉。
+             			魏女士毕业于芝加哥大学，她在创办自己马里兰州的律所前曾任芝加哥市检察官、美国农业部特别顾问、华盛顿多家知名律所合伙人。<br>
+             			更多信息，签约后可以查看。</p>
+             		</div>
+             		<div class="zhaog">
+             			<span>TALENT WITHOUT BOARDERS LLC</span>
+             			<p class="js">由EB3移民实操专家郭勇良（Max）先生创办。郭先生早年获美国马里兰大学公共政策学院的全额奖学金，在该校攻读公共事务管理专业。
+             				毕业后，郭先生在魏珍喜律师事务所担任助理律师，一线处理过300余个EB3案例，系统地掌握EB3流程，包括劳工卡的递案与抽查，移民请愿的申请与受理，DS260的填写及P3文件包的准备等。郭先生是美国劳工部注册认证的农业招工中介。<br>
+             				<a href="http://sdatcert3.resiusa.org/ucc-charter/Pages/CharterSearch/default.aspx" target="_blank">查询公司信息</a>（请用Department ID进行搜索：W15823057）</p>
+             		</div>
+             		</div>
+             </div>		    	
+	
+	<!---底部--->		
+	<div style="margin-top:-20px;">{dede:include filename="footer.htm"/}</div>
+	
+<script src="/bss/jquery.smoove.js"></script>
+<script>$('.block').smoove({offset:'45%'});</script>
+  </body>
+</html>	

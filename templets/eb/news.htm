@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>  
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>   
+   <title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+    <meta name="description" content="{dede:field name='description'  function='html2text(@me)'/}" />
+    <meta name="keywords" content="{dede:field name='keywords'/}" />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/bss/style.css" >
+  <!-- top---->
+  <script type="text/javascript" src="/bss/top/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript">
+	$(document).ready(function(){
+	//首先将#back-to-top隐藏
+	$("#back-to-top").hide();
+	//当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
+	$(function () {
+		$(window).scroll(function(){
+		if ($(window).scrollTop()>100){
+		$("#back-to-top").fadeIn(1500);
+		}
+		else
+		{
+		$("#back-to-top").fadeOut(1500);
+		}
+		});
+		//当点击跳转链接后，回到页面顶部位置
+		$("#back-to-top").click(function(){
+		$('body,html').animate({scrollTop:0},1000);
+		return false;
+		});
+		});
+		});
+  </script>  
+    
+   </head> 
+  <body id="top">
+  	<!--手机导航--><div class="sj-wrapper">
+        	<div class="toolbar">
+        		<div id="open-sb" class="menu-button menu-left"></div>
+        	</div>
+        	<section class="sidebar">
+        		<nav>
+        			<h6>网站导航</h6>
+        			<ul>
+        				<li><a href="/" >首页</a></li>
+        				<li><a href="/company/">公司与项目</a></li>        				
+        				<li><a href="/procedures/">案例与流程</a></li>
+        				<li><a href="/service/">价格与服务</a></li>
+        				<li><a href="/news/">EB3讲堂</a></li>
+        				<li><a href="/contact/">联系预约</a></li>        				
+        			</ul>
+        			<hr>
+        			<h6>EB3讲堂</h6>
+        			<ul>
+        				{dede:channel reid="1" type="son" }	
+					<li><a href="[field:typeurl/]">[field:typename/]</a></li>
+				{/dede:channel}	
+        		    </ul>
+        		  </nav>
+        	</section>
+        	</div>
+<script>
+$( document ).ready(function() {
+	$.ajaxSetup({
+		cache: false
+	});
+	$( '.sidebar' ).simpleSidebar({
+		settings: {
+			opener: '#open-sb',
+			wrapper: '.wrapper',
+			animation: {
+				duration: 500,
+				easing: 'easeOutQuint'
+			}
+		},
+		sidebar: {
+			align: 'left',
+			width: 200,
+			closingLinks: 'a',
+		}
+	});
+});
+</script><!--手机导航-->
+  	<p id="back-to-top"><a href="#top"><span></span></a></p>  
+<!---头部--->
+<div class="nei-top">
+    <div class="eb3jt nei-site-header" >
+    			{dede:include filename="head.htm"/}
+    		</div>
+    </div>		
+	<!---中间main---->
+	<div class="w100 bgw">
+		<div class="w1000 md clearfix">
+			<div class="fl jiangt">
+				<ul class="news-list">
+		{dede:list pagesize="6" orderby="id" orderway="desc"}		
+				<li>
+					<!--标签旗帜---><div class="jiaoluo"></div>
+					<div class="tagg"><a>[field:typelink/]</a></div>
+					<div class="tagg1"></div>
+					<!--标题--->
+					<div class="biaotii clearfix">
+						<h2 class="fl"><a href="[field:arcurl/]">[field:title/]</a></h2>
+						<span class="rt">[field:pubdate function="GetDateMK(@me)"/]</span>
+					</div>
+					<!--- 缩略图简介---->
+					<div class="slt"><a href="[field:arcurl/]"><img src="[field:picname/]"></a></div>
+					<div class="zww">[field:description/]... 
+					<br><a href="[field:arcurl/]"> <查看全文> </a>
+					</div>
+					<!-- 关键词---->
+					<div class="gongn clearfix">
+						<div class="tagss rt">本文关键字：  [field:id function=GetTags(@me)/]</div>			
+					</div>
+				</li>
+		{/dede:list}								
+			</ul>
+			<!---分页--->
+		<div class="fye clearfix">{dede:pagelist istitem="index,pre,next,end,info" listsize='5' /}</div>
+		<div class="clear"></div><!---分页END--->
+	</div>	
+			
+			<!--右边--->
+			<div class="wzrt  rt">	
+				<!---搜索框--->
+				<form accept-charset="UTF-8" name="search" action="/plus/search.php" method="get" data-wl-search="form" novalidate="novalidate" class="soso">
+                    <input type="hidden" id="site-search-fuseaction" name="fuseaction" value="search.results">
+                    <div class="input-wrapper">
+                        <div class="content11" data-wl-search="appendTo">
+                            <span class="ico"></span>
+                             <input type="hidden" name="kwtype" value="0">
+                            <input name="q" type="text" class="input-txt search-validation ui-autocomplete-input hint" id="search-keyword" value="Search..." onfocus="if(this.value=='Search...'){this.value='';}" onblur="if(this.value==''){this.value='Search...';}">
+                            <a href="##" class="cancel" data-wl-search="cancel"></a>
+                        <ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul></div>
+                    </div>
+                    <input type="submit" class="wl-button input-submit" value="Go">
+                </form>
+				<!---搜索框--->			
+			<div class="ltagg">				
+				<h3><a href="/news/">EB3 讲堂</a></h3>
+				<ul class="archive-list">
+				{dede:channel reid="1" type="son" }	
+					<li><a href="[field:typeurl/]">[field:typename/]</a></li>
+				{/dede:channel}	
+				</ul>
+				<div class="suiji">随机分享</div>
+				<ul class="fenx">
+					{dede:arclist row='100' pagesize='10' orderby='rand'}
+					<li><a href="[field:arcurl/]">-&nbsp;[field:title/]</a></li>
+					{/dede:arclist}
+				</ul>
+<br>
+<div class="suiji" style="background: url(/bss/neiye/suiji2.png) no-repeat 30px 5px;">文章关键字标签</div>
+				<ul class="tagli">
+ {dede:tag row='30' sort='new' getall='0'} 
+<li><a href='[field:link/]' target="_blank">[field:tag /]</a> </li>
+{/dede:tag} 
+</ul>
+				</div></div><!--右边 END--->	
+			</div>
+	</div>	
+		
+	<div style="margin-top:-20px;">{dede:include filename="news-footer.htm"/}</div>
+<script src="/bss/jquery.smoove.js"></script>
+<script>$('.block').smoove({offset:'45%'});</script>
+  </body>
+    <!---手机导航--->
+<link rel="stylesheet" type="text/css" href="/bss/sjnav/main.css">
+<script src="/bss/sjnav/jquery-ui.min.js"></script>
+<script src="/bss/sjnav/jquery.simplesidebar.js"></script>
+<!---手机导航--->
+</html>	    
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?c8f2df9b9ea8b2829267f3a5d664da20";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>

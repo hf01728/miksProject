@@ -1,0 +1,854 @@
+﻿
+
+body {
+    color: #898989;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    font-size: 12px;
+    line-height: 22px;
+    font-family: "Microsoft YaHei";
+    position: relative;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei";
+}
+.nav_fixed{ position:fixed; top:0px; left:0px; right:0px; z-index:9999;}
+a:focus {
+    outline: none;
+}
+
+a {
+    color: #3e3a39;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    a:hover {
+        color: #5cb2dd;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+img {
+    border: none;
+}
+
+.clear {
+    clear: both;
+    font-size: 0px;
+    height: 0px;
+    line-height: 0px;
+}
+
+.red {
+    color: red;
+}
+
+ul li {
+    list-style: none;
+}
+
+.fff {
+    background: #fff;
+}
+
+.hei10 {
+    height: 10px;
+}
+
+.hei20 {
+    height: 20px;
+}
+
+.bg {
+    background: #fff;
+}
+
+.hei30 {
+    height: 30px;
+}
+
+.hei45 {
+    height: 45px;
+}
+
+.main {
+    width: 1100px;
+    min-width:1100px;
+    margin: 0 auto;
+}
+
+.mainTwo {
+    width: 1002px;
+    min-width:1002px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+
+/*top*/
+.navtp {
+    height: 93px;
+    line-height: 93px;
+    margin-right: 40px;
+}
+
+    .navtp a {
+        font-size: 16px;
+    }
+
+    .navtp span {
+        cursor: pointer;
+        border: solid 1px #fff;
+        padding: 10px 0px 10px;
+        border-bottom: 2px solid #fff;
+    }
+
+        .navtp span:hover {
+            padding: 10px 0px 10px;
+            border-bottom: 2px solid #5cb2dd;
+        }
+
+.banner {
+    background: url(../images/Canada_04.jpg) no-repeat center;
+}
+
+    .banner .ban {
+        background: url(../images/Canada_04.jpg) no-repeat center;
+        height: 599px;
+    }
+
+.nav {
+    height: 100px;
+    line-height: 100px;
+    background: #e6212a;
+}
+    .nav .main {
+        background: #e6212a;
+    }
+
+.tableNav {
+    margin: 0 auto;
+}
+
+    .tableNav tr td {
+        border-right: solid 1px #fff;
+    }
+
+        .tableNav tr td:last-child {
+            border-right: none;
+        }
+
+        .tableNav tr td a {
+            padding: 0px 22px;
+            font-size: 24px;
+            color: #fff;
+        }
+
+            .tableNav tr td a:hover {
+                display: block;
+                background: #fff;
+                color:#535353;
+            }
+/*end top*/
+
+/*xxiangmugaikuang*/
+.gaititle {
+    width: 1002px;
+    margin: 0 auto;
+    border: solid 2px #ff9103;
+}
+
+    .gaititle .left {
+        margin: 20px;
+    }
+
+    .gaititle .right {
+        width: 568px;
+        margin: 20px;
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+        .gaititle .right span {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+            .gaititle .right span a {
+                color: #350546;
+            }
+
+.topline {
+    height: 7px;
+    line-height: 7px;
+    width: 120px;
+    background: #ff9103;
+    margin: -4px 0px 0px 30px;
+}
+
+.rightline {
+    height: 120px;
+    width: 7px;
+    background: #ff9103;
+    position: absolute;
+    margin: 120px 0px 0px 1000px;
+}
+
+.cnenter {
+    text-align: center;
+    font-size: 40px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.imgleft {
+    margin-right: 20px;
+}
+
+.imgright {
+    margin-left: 20px;
+}
+
+.imageCenter img {
+    width: 100%;
+}
+
+.img_1 {
+    background: url(../images/Canada_14.jpg) no-repeat center;
+}
+
+    .img_1 .imgFist {
+        height: 213px;
+        background: url(../images/Canada_14.jpg) no-repeat center;
+    }
+
+.img_2 {
+    background: url(../images/Canada_15.jpg) no-repeat center;
+}
+
+    .img_2 .imgFist {
+        height: 215px;
+        background: url(../images/Canada_15.jpg) no-repeat center;
+    }
+
+.img_3 {
+    background: url(../images/Canada_16.jpg) no-repeat center;
+}
+
+    .img_3 .imgFist {
+        height: 82px;
+        background: url(../images/Canada_16.jpg) no-repeat center;
+    }
+
+.img_4 {
+    background: url(../images/Canada_17.jpg) no-repeat center;
+}
+
+    .img_4 .imgFist {
+        height: 230px;
+        background: url(../images/Canada_17.jpg) no-repeat center;
+    }
+
+.img_5 {
+    background: url(../images/Canada_18.jpg) no-repeat center;
+}
+
+    .img_5 .imgFist {
+        height: 224px;
+        background: url(../images/Canada_18.jpg) no-repeat center;
+    }
+
+.img_6 {
+    background: url(../images/Canada_19.jpg) no-repeat center;
+}
+
+    .img_6 .imgFist {
+        height: 144px;
+        background: url(../images/Canada_19.jpg) no-repeat center;
+    }
+
+.img_7 {
+    background: url(../images/Canada_20.jpg) no-repeat center;
+}
+
+    .img_7 .imgFist {
+        height: 141px;
+        background: url(../images/Canada_20.jpg) no-repeat center;
+    }
+
+
+
+.moreClass {
+    width: 400px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+    .moreClass .left {
+        background: url(../images/index_03.png) no-repeat center;
+        width: 144px;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    .moreClass .right {
+        background: url(../images/index_05.png) no-repeat center;
+        width: 218px;
+        height: 50px;
+        cursor: pointer;
+        text-align: right;
+        color: #fff;
+        font-size: 22px;
+        line-height: 50px;
+    }
+
+        .moreClass .right span {
+            margin-right: 10px;
+        }
+/*xiangmugaikuang end */
+
+
+/*xiaoyuan*/
+.xiaoBG {
+    height: 723px;
+    background: #fcf9e8;
+}
+
+    .xiaoBG .main {
+        position: absolute;
+        z-index: 10;
+        left: 50%;
+        margin-left: -550px;
+        background: #fcf9e8;
+    }
+
+.xiaoLeft {
+    position: absolute;
+    left: 0;
+    height: 723px;
+    background: url(../images/Canada_22.jpg) no-repeat left;
+    width: 265px;
+    z-index: 1;
+}
+
+.xiaoright {
+    position: absolute;
+    right: 0;
+    height: 723px;
+    background: url(../images/Canada_25.jpg) no-repeat left;
+    width: 265px;
+    z-index: 1;
+}
+/* 老的 Firefox */
+.shexian {
+    height: 270px;
+    background: #fff;
+    -moz-box-shadow: 0px 0px 30px 10px #c6c3b6;
+    box-shadow: 0px 0px 30px 10px #c6c3b6;
+}
+
+    .shexian .img1 {
+        width: 380px;
+        height: 230px;
+        margin: 20px;
+    }
+
+    .shexian .font1 {
+        width: 560px;
+        margin: 20px 0px 0px 20px;
+        font-size: 18px;
+        line-height: 30px;
+            background:url(../images/Canada0_28.png) no-repeat left bottom;
+              height:248px;
+              
+    }
+
+        .shexian .font1 span {
+            font-weight: bold;
+        }
+
+            .shexian .fontOne {
+        width: 535px;
+        margin: 20px;
+        font-size: 18px;
+        line-height: 30px;
+         background:url(../images/Canada_31.jpg) no-repeat right bottom;
+         height:246px;
+    }
+
+        .shexian .fontOne span {
+            font-weight: bold;
+        }
+
+
+.fontimg {
+    margin-top: 10px;
+}
+/*end xiaoyuan*/
+
+/* banliliucheng*/
+.selectLiuCheng .one:first-child {
+    margin-left: 35px;
+}
+
+.selectLiuCheng .one {
+    width: 201px;
+    height: 216px;
+    background: url(../images/Canada_46.jpg) no-repeat center;
+    float: left;
+    margin: 5px 22px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+    font-size: 22px;
+    color: #fff;
+    font-weight: bold;
+}
+
+    .selectLiuCheng .one div {
+        margin-top: 50px;
+    }
+
+    .selectLiuCheng .one span {
+        font-size: 36px;
+    }
+
+.selectLiuCheng .two {
+    width: 201px;
+    height: 216px;
+    background: url(../images/Canada_48.jpg) no-repeat center;
+    float: left;
+    margin: 5px 22px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+    color: #c10623;
+    font-weight: bold;
+}
+
+    .selectLiuCheng .two div {
+        margin-top: 50px;
+    }
+
+    .selectLiuCheng .two span {
+        font-size: 36px;
+    }
+
+.JobFile {
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.SubmitMyPoint {
+    height: 92px;
+    background: url(../images/Canada_57.jpg) no-repeat center;
+}
+
+.SubmitEoi {
+    width: 250px;
+    height: 92px;
+    line-height: 92px;
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+}
+
+.SubmitFont {
+    font-size: 14px;
+    line-height: 30px;
+    margin-top: 15px;
+     margin-left:30px;
+}
+
+    .SubmitFont a {
+        color: #383baa;
+    }
+
+    .SubmitFont img {
+        margin-right: 16px;
+    }
+
+.ShowImg {
+    margin-top: 15px;
+}
+
+    .ShowImg .step {
+        margin-left: 35px;
+    }
+
+        .ShowImg .step img {
+            border: solid 1px #e1e1e1;
+        }
+
+    .ShowImg .step_Two {
+        margin-right: 10px;
+        border: solid 1px #e1e1e1;
+        margin-top: 5px;
+    }
+/*banliliucheng*/
+
+/*qingliang*/
+.qingBg {
+    background: url(../images/Canada_70.jpg) no-repeat center;min-width:1002px;
+}
+
+    .qingBg .mainTwo {
+        background: url(../images/Canada_70.jpg) no-repeat center;
+        height: 813px;
+        min-width:1002px;
+    }
+
+.qingliang {
+    background: #a77374;
+    height: 562px;
+    padding: 20px;
+}
+
+.Cnada {
+    height: 37px;
+    line-height: 37px;
+    font-size: 18px;
+    background: #fff;
+    margin-top: 13px;
+    text-align: center;
+    color: #e12100;
+}
+
+.CandaTwo {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    height: 37px;
+    line-height: 37px;
+    margin-top: 13px;
+}
+
+.CandaTree {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    height: 37px;
+    line-height: 37px;
+    margin-top: 13px;
+    background: #2c88bf;
+}
+/*end qingliang*/
+
+/*youshi*/
+.youshi {
+    background: #c10623;
+}
+
+.tabletr td {
+    font-size: 14px;
+    text-align: center;
+}
+
+youshi .youshiBG {
+    background: #c10623;
+    min-width:1002px;
+}
+
+.youshifle .youshiwai {
+    padding: 10px;
+    background: #fff;
+    margin-right: 3px;
+}
+
+    .youshifle .youshiwai:last-child {
+        margin-right: 0px;
+    }
+
+.youshiwai .font {
+    font-size: 24px;
+    color: #af1a2d;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.flost {
+    position: absolute;
+    background: #fff;
+    display: none;
+    height: 183px;
+    width: 216px;
+    padding: 50px 10px 0px 20px;
+    /*padding-left:20px;
+    padding-right:20px;*/
+    margin: -223px 0px 0px -10px;
+    font-size: 16px;
+    line-height: 40px;
+    color: red;
+    text-align: left;
+    filter: alpha(Opacity=90);
+    opacity: 0.9;
+    -moz-opacity: 0.9;
+}
+
+.DivFole {
+    line-height: 20px;
+    font-size: 14px;
+    background: #000;
+    color: #fff;
+    filter: alpha(Opacity=80);
+    opacity: 0.8;
+    position: absolute;
+    width: 215px;
+    height: 83px;
+    margin-top: -53px;
+    display: none;
+    -moz-opacity: 0.8;
+    text-align:left;
+}
+
+.DivFole_Two {
+    line-height: 20px;
+    font-size: 14px;
+    background: #000;
+    color: #fff;
+    filter: alpha(Opacity=80);
+    opacity: 0.8;
+    position: absolute;
+    width: 215px;
+    height: 83px;
+    margin-top: -64px;
+    display: none;
+    -moz-opacity: 0.8;
+    text-align:left;
+}
+
+.DivFole_Tree {
+    line-height: 20px;
+    font-size: 14px;
+    background: #000;
+    color: #fff;
+    position: absolute;
+    width: 215px;
+    height: 83px;
+    margin-top: -64px;
+    display: none;
+     filter: alpha(Opacity=80);
+    opacity: 0.8;
+    -moz-opacity: 0.8;
+    text-align:left;
+}
+/*end youshi*/
+
+/*chuguo */
+.line {
+    border-top: solid 1px #3e3a39;
+}
+
+.linefont {
+    font-size: 40px;
+    position: absolute;
+    color: #3e3a39;
+    background: #fff;
+    height: 50px;
+    line-height: 50px;
+    left: 50%;
+    margin-left: -110px;
+    margin-top: -25px;
+    padding: 0px 20px;
+}
+
+.maikeFont {
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.chuguoimg {
+    background: #fff;
+    -moz-box-shadow: 0px 0px 30px 10px #c6c3b6;
+    box-shadow: 0px 0px 30px 10px #c6c3b6;
+}
+
+.font_youshi {
+    font-size: 30px;
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
+}
+
+.benxiao {
+    margin: 10px 73px;
+}
+
+.zuixiao {
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background: #0281a4;
+}
+
+.xiaoimg {
+    background: #f3f3ea;
+}
+
+    .xiaoimg .left {
+        margin-left: 15px;
+    }
+
+    .xiaoimg .right {
+        background: #fff;
+        margin-right: 30px;
+        padding: 10px;
+        margin-top: 48px;
+    }
+
+.fontxiao {
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    color: #0281a4;
+}
+
+.mrgleft {
+      margin:10px 0px 0px 65px; line-height:22px;
+}
+
+
+.Foot_font {
+    background: #f5f7f9;
+}
+    .Foot_font .mainTwo {
+         height:605px; background:url(../images/1121/1121_30.jpg) no-repeat center #f5f7f9; 
+    }
+.ContentUsWeiXin {
+     width:128px; height:128px; margin:0 auto;
+}
+.ContentUs {
+     font-size:30px;width:128px; margin:0 auto; line-height:40px; text-align:center;
+}
+.Text_400 {
+    text-align:center; font-size:20px; height:50px; line-height:50px;
+}
+    .Text_400 span {
+        margin:0px 15px;
+    }
+
+.Font_left {
+    width:205px;  margin-right:43px;
+}
+
+.Foot_Title {
+     height:46px; line-height:46px; font-size:14px; text-align:center;
+}
+    .Foot_Title img {
+        margin-right:15px;
+    }
+.Foot_Address {
+    margin-top:5px; line-height:30px; font-size:14px;
+}
+    /*.font .foot_1 {
+        background: url(../images/Foot_94.jpg) no-repeat center;
+        height: 111px;
+    }
+
+    .font .foot_2 {
+        background: url(../images/Foot_96.jpg) no-repeat center;
+        height: 88px;
+    }
+
+    .font .foot_3 {
+        background: url(../images/Foot_98.jpg) no-repeat center;
+        height: 105px;
+    }
+
+    .font .foot_4 {
+        background: url(../images/Foot_99.jpg) no-repeat center;
+        height: 223px;
+    }
+
+    .font .foot_5 {
+        background: url(../images/Foot_100.jpg) no-repeat center;
+        height: 75px;
+    }*/
+
+
+
+
+
+/*end chuguo*/
+
+
+/*conest*/
+
+.suspend{width:40px;height:198px;position:fixed;top:50%;right:0;overflow:hidden;z-index:9999;margin-top:-99px;}
+.suspend dl{width:200px;height:198px;border-radius:25px 0 0 25px;padding-left:40px;box-shadow:0 0 5px #e4e8ec;}
+.suspend dl dt{width:40px;height:198px;background:url(../images/suspend.png);position:absolute;top:0;left:0;cursor:pointer;}
+.suspend dl dd.suspendQQ{width:160px;height:66px;background:#ffffff;}
+.suspend dl dd.suspendQQ a{width:160px;height:66px;display:block;background:url(../images/suspend.png) -40px 0;overflow:hidden;}
+.suspend dl dd.suspendTel{width:160px;height:66px;background:#ffffff;}
+.suspend dl dd.suspendTel a{width:160px;height:66px;display:block;background: url(../images/suspend.png) -40px -67px;overflow:hidden;}
+.suspend dl dd.suspendbd{width:160px;height:66px;background:#ffffff;}
+.suspend dl dd.suspendbd a{width:160px;height:66px;display:block;background: url(../images/suspend.png) -40px -132px;overflow:hidden;}
+.suspendbd iframe {margin-top: 35px;}
+.suspendbd .QQWrap{text-align: center;  }
+.suspendbd .QQWrap img{
+    margin-top:35px;
+}
+/*end lianxiwomen*/
+
+/*dankuan*/
+.MessageBG {
+     background:#000;
+      filter: alpha(Opacity=80);
+    opacity: 0.8;
+    -moz-opacity: 0.8;
+    position:fixed;
+    top:0;left:0;right:0;bottom:0;
+    width:100%; height:100%;
+     z-index:1500000;
+     display:none;
+}
+.MessageBook {
+    width:700px; background:#fff; position:fixed;left:50%; top:0; bottom:0; margin-left:-300px; z-index:1500005; height:100%;
+    display:none;
+}
+.Close {
+    position:absolute; text-align:right;
+}
+.weixin {
+    position:absolute; margin-left:488px; margin-top:15px;
+}
+.QQMessageHref {
+     width:100px; margin-left:753px; height:30px;cursor:pointer;
+}
+.QQMessageHref a {
+    display:block;
+}
+
+.footLast {
+    height:80px; background:#535353; min-width:1100px;
+}
+.footLast .main {
+   color:#fff; text-align:center; background:#535353; 
+}
+.footLast .main .FootFont {
+   line-height:28px;
+}
+/*iframe{*/
+    /*position: absolute;*/
+    /*right:28%;*/
+    /*bottom:464px;*/
+/*}*/
+
+
+/*end 谭康*/
